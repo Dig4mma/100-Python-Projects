@@ -6,3 +6,4 @@
     2.Tip Calculator
     3.Treasure Island
     4.Rock Paper Scissors
+    5.Password Generator
