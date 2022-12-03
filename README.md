@@ -7,3 +7,4 @@
     3.Treasure Island
     4.Rock Paper Scissors
     5.Password Generator
+    6.Reeborg's Maze (https://reeborg.ca/reeborg.html)
