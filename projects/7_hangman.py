@@ -60,7 +60,7 @@ stages = ['''
 
 word_list = ["ardvark", "baboon", "camel", "bigmac", "axe", "cannabis", "mushrooms"]
 chosen_word = random.choice(word_list)
-lives = 6
+lives = 7
 
 #Testing code
 #print(f'Pssst, the solution is {chosen_word}.')
