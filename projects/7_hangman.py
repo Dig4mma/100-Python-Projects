@@ -58,48 +58,35 @@ stages = ['''
  =========
                ''']
 
-end_of_game = False
-word_list = ["ardvark", "baboon", "camel"]
+word_list = ["ardvark", "baboon", "camel", "bigmac", "axe", "cannabis", "mushrooms"]
 chosen_word = random.choice(word_list)
-word_length = len(chosen_word)
-
-#TODO-1: - Create a variable called 'lives' to keep track of the number of lives left.
-#Set 'lives' to equal 6.
 lives = 6
 
 #Testing code
-print(f'Pssst, the solution is {chosen_word}.')
+#print(f'Pssst, the solution is {chosen_word}.')
 
 #Create blanks
 display = []
-for _ in range(word_length):
-    display += "_"
+for i in chosen_word:
+    display.append("_")
 
-while not end_of_game:
-    guess = input("Guess a letter: ").lower()
+print(f"{' '.join(display)}")
+while lives > 0 and "_" in display:
+    guess = input("Guess the letter! \n").lower()
+    if guess not in chosen_word:
+        lives -= 1
+        print(f"You lost a live! You have {lives} lives left!")
+        print(stages[lives])
+    else:
+        for i in range(len(chosen_word)):
+            if chosen_word[i] == guess:
+                display[i] = guess
 
-    #Check guessed letter
-    for position in range(word_length):
-        letter = chosen_word[position]
-        # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
-        if letter == guess:
-            display[position] = letter
-
-        #TODO-2: - If guess is not a letter in the chosen_word,
-        elif letter != guess:
-            lives -= 1
-    #Then reduce 'lives' by 1.
-    #If lives goes down to 0 then the game should stop and it should print "You lose."
-    if lives == 0:
-        print("You Lose!")
-        break
-    #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
 
-    #Check if user has got all letters.
-    if "_" not in display:
-        end_of_game = True
-        print("You win.")
 
-    #TODO-3: - print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
-    print(stages[lives])
+if lives > 0:
+    print("You won!")
+else:
+    print("Game Over!")
+    print(stages[0])
