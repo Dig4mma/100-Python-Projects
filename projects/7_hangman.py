@@ -21,8 +21,7 @@ while lives > 0 and "_" in display:
 
     if guess not in chosen_word:
         lives -= 1
-        print(f"{guess} is not in the word.")
-        print(f"You lost a live! You have {lives} lives left!")
+        print(f"{guess} is not in the word. {lives} lives left!")
         print(stages[lives])
     elif guess in display:
         print(f"You already guessed {guess}")
