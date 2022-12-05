@@ -1,66 +1,11 @@
 import random
+import hangman_arts
+import hangman_words
 
-stages = ['''
-    +---+
-    |   |
-    O   |
-   /|\  |
-   / \  |
-        |
-=========
-''', '''
-    +---+
-    |   |
-    O   |
-   /|\  |
-   /    |
-        |
-=========
-          ''', '''
-    +---+
-     |   |
-     O   |
-    /|\  |
-         |
-         |
- =========
-     ''', '''
-     +---+
-     |   |
-     O   |
-    /|   |
-         |
-         |
- =========
-               ''', '''
-     +---+
-     |   |
-     O   |
-     |   |
-         |
-         |
- =========
-          ''', '''
-     +---+
-     |   |
-     O   |
-         |
-         |
-         |
- =========
-            ''', '''
-     +---+
-     |   |
-         |
-         |
-         |
-         |
- =========
-               ''']
-
-word_list = ["ardvark", "baboon", "camel", "bigmac", "axe", "cannabis", "mushrooms"]
-chosen_word = random.choice(word_list)
+chosen_word = random.choice(hangman_words.word_list)
 lives = 7
+print(hangman_arts.logo)
+stages = hangman_arts.stages
 
 #Testing code
 #print(f'Pssst, the solution is {chosen_word}.')
@@ -69,14 +14,18 @@ lives = 7
 display = []
 for i in chosen_word:
     display.append("_")
-
 print(f"{' '.join(display)}")
+
 while lives > 0 and "_" in display:
     guess = input("Guess the letter! \n").lower()
+
     if guess not in chosen_word:
         lives -= 1
+        print(f"{guess} is not in the word.")
         print(f"You lost a live! You have {lives} lives left!")
         print(stages[lives])
+    elif guess in display:
+        print(f"You already guessed {guess}")
     else:
         for i in range(len(chosen_word)):
             if chosen_word[i] == guess:
