@@ -1,5 +1,5 @@
 word_list = [
-    'abruptly',
+'abruptly',
 'absurd',
 'abyss',
 'affix',

@@ -20,13 +20,14 @@ def caesar(start_text, shift_amount, cipher_direction):
 
 
 print(caesar_art.logo)
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
-shift = (shift % 26) if shift>26 else shift
-caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
-restart = input("Write 'YES' if you want to restart the program! Otherwise press a key!").upper()
+
+restart = 'YES'
 
 while restart == 'YES':
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    shift = (shift % 26) if shift>26 else shift
     caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+    restart = input("Write 'YES' if you want to restart the program! Otherwise press a key!\n").upper()
 print("Goodbye!")

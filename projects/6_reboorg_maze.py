@@ -1,5 +1,5 @@
 # Instruction of how to Escape maze in Reeborg's world!
-# you can View the challenge on: https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Maze&url=worlds%2Ftutorial_en%2Fmaze1.json
+# you can View the challenge on: "https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Maze&url=worlds%2Ftutorial_en%2Fmaze1.json"
 # you can use the code bewlow on that challenge and see how it works!
 
 def turn_right():
