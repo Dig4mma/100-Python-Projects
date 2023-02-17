@@ -12,4 +12,4 @@
 8. Caesar cipher
 9. Secret Auction
 10. calculator
-11. Blackjack (Boss Project)
+11. **Blackjack (Boss Project)**
