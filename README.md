@@ -8,8 +8,9 @@
 4. Rock Paper Scissors
 5. Password Generator
 6. [Reeborg's Maze](https://reeborg.ca/reeborg.html)
-7. Hangman
+7. Hangman 
 8. Caesar cipher
 9. Secret Auction
-10. calculator
+10. Calculator
 11. **Blackjack (Boss Project)**
+12. Number Guessing Game
