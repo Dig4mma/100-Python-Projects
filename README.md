@@ -15,3 +15,4 @@
 11. **Blackjack (Boss Project)**
 12. Number Guessing Game
 13. Higher Lower
+14. Coffee Machine
